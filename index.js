@@ -7,8 +7,10 @@ import cloudinary from "cloudinary";
 import Image from "./Routes/ImageRoutes.js";
 import User from "./Routes/UserRoutes.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 dotenv.config();
 
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(fileUpload());
