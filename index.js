@@ -10,7 +10,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 dotenv.config();
 
-app.use(cors());
+app.use(cors({ credentials: true, origin: "*" }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(fileUpload());
